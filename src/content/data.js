@@ -295,18 +295,33 @@ export const PUBLICATIONS = [
   {
     id: 'medibuddy',
     title: 'Medibuddy — A Healthcare Chatbot using AI',
-    venue: 'International Journal of Novel Research and Development (IJNRD)',
-    venueShort: 'IJNRD',
-    citation: 'Vol. 9, Issue 6, pp. e709–e714 · June 2024',
+    venue: 'International Research Journal / Conference Proceedings',
+    venueShort: 'Published paper',
     year: '2024',
     role: 'Lead Author',
-    kind: 'Journal article',
+    kind: 'Published paper',
     abstract:
       'Presents a conversational NLP architecture designed for preliminary clinical inquiry triage, patient intent parsing, and contextual health guidance.',
     topics: ['Natural Language Processing', 'Conversational AI', 'Healthcare Tech'],
     figure: ['Patient query', 'Intent parsing', 'Inquiry triage', 'Health guidance'],
     related: null,
     link: 'https://doi.org/10.5281/zenodo.13362783',
+  },
+  {
+    id: 'healthbot',
+    title: 'HealthCare Chatbot Using AI',
+    venue: 'International Journal of Novel Research and Development (IJNRD)',
+    venueShort: 'IJNRD',
+    citation: 'Vol. 9, Issue 6, pp. e709–e714 · June 2024',
+    year: '2024',
+    role: 'Co-Author · with R. Singhania, D. Reddy, K. Tarun Sai Teja and C. Jetty (DSATM, Bangalore)',
+    kind: 'Journal article',
+    abstract:
+      'A Flask web application that collects symptoms, age and other details through a chatbot-style conversation, then predicts likely diseases with a Random Forest model and cosine-similarity symptom matching, with user data stored through SQLAlchemy.',
+    topics: ['Healthcare AI', 'NLP', 'Random Forest', 'Flask', 'Human-Computer Interaction'],
+    figure: ['Symptom chat', 'Preprocessing', 'Random Forest', 'Disease prediction', 'Health info'],
+    related: null,
+    link: null,
     pdf: 'https://ijnrd.org/papers/IJNRD2406465.pdf',
   },
 ];
@@ -373,7 +388,7 @@ export const ENTITIES = Object.fromEntries([
 // Unified chronology used by the trajectory log (real dates only).
 export const CHRONOLOGY = [
   { year: '2023', items: [{ ref: 'stagezero', kind: 'role' }] },
-  { year: '2024', items: [{ ref: 'vanguard', kind: 'experiment' }, { ref: 'medibuddy', kind: 'publication' }] },
+  { year: '2024', items: [{ ref: 'vanguard', kind: 'experiment' }, { ref: 'medibuddy', kind: 'publication' }, { ref: 'healthbot', kind: 'publication' }] },
   { year: '2025', items: [{ ref: 'amakh', kind: 'role' }, { ref: 'docuwise', kind: 'experiment' }] },
   { year: '2026', items: [{ ref: 'tripify', kind: 'experiment' }, { ref: 'amr', kind: 'experiment' }, { ref: 'icammae', kind: 'publication' }, { ref: 'codetrappers', kind: 'role' }] },
 ];

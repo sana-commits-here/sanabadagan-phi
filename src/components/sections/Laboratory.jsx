@@ -97,11 +97,11 @@ export default function Laboratory() {
                     <span className="sp-links">
                       {p.link ? (
                         <a className="ulink" href={p.link} target="_blank" rel="noopener noreferrer" data-cursor="link">Read paper (DOI) ↗</a>
-                      ) : (
+                      ) : !p.pdf && (
                         <span className="lab-muted">Paper link pending</span>
                       )}
                       {p.pdf && (
-                        <a className="ulink" href={p.pdf} target="_blank" rel="noopener noreferrer" data-cursor="link">PDF ↗</a>
+                        <a className="ulink" href={p.pdf} target="_blank" rel="noopener noreferrer" data-cursor="link">Read paper (PDF) ↗</a>
                       )}
                       {p.related && (
                         <a className="ulink" href={ENTITIES[p.related].anchor} data-cursor="link">Related experiment ↘</a>
