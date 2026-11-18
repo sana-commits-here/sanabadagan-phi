@@ -87,7 +87,7 @@ export default function Laboratory() {
                 <div className="sp-main">
                   <Reveal>
                     <h4 id={`pub-${p.id}`} className="sp-title serif">{p.title}</h4>
-                    <p className="sp-venue">{p.venue}</p>
+                    <p className="sp-venue">{p.venue}{p.citation ? ` · ${p.citation}` : ''}</p>
                     <p className="sp-role mono-s">{p.role}</p>
                     <p className="sp-abs">{p.abstract}</p>
                   </Reveal>
@@ -96,9 +96,12 @@ export default function Laboratory() {
                     <span className="lab-muted">{p.topics.join(' · ')}</span>
                     <span className="sp-links">
                       {p.link ? (
-                        <a className="ulink" href={p.link} target="_blank" rel="noopener noreferrer" data-cursor="link">Read paper ↗</a>
+                        <a className="ulink" href={p.link} target="_blank" rel="noopener noreferrer" data-cursor="link">Read paper (DOI) ↗</a>
                       ) : (
                         <span className="lab-muted">Paper link pending</span>
+                      )}
+                      {p.pdf && (
+                        <a className="ulink" href={p.pdf} target="_blank" rel="noopener noreferrer" data-cursor="link">PDF ↗</a>
                       )}
                       {p.related && (
                         <a className="ulink" href={ENTITIES[p.related].anchor} data-cursor="link">Related experiment ↘</a>

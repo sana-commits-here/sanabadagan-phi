@@ -295,17 +295,19 @@ export const PUBLICATIONS = [
   {
     id: 'medibuddy',
     title: 'Medibuddy — A Healthcare Chatbot using AI',
-    venue: 'International Research Journal / Conference Proceedings',
-    venueShort: 'Published paper',
+    venue: 'International Journal of Novel Research and Development (IJNRD)',
+    venueShort: 'IJNRD',
+    citation: 'Vol. 9, Issue 6, pp. e709–e714 · June 2024',
     year: '2024',
     role: 'Lead Author',
-    kind: 'Published paper',
+    kind: 'Journal article',
     abstract:
       'Presents a conversational NLP architecture designed for preliminary clinical inquiry triage, patient intent parsing, and contextual health guidance.',
     topics: ['Natural Language Processing', 'Conversational AI', 'Healthcare Tech'],
     figure: ['Patient query', 'Intent parsing', 'Inquiry triage', 'Health guidance'],
     related: null,
-    link: null,
+    link: 'https://doi.org/10.5281/zenodo.13362783',
+    pdf: 'https://ijnrd.org/papers/IJNRD2406465.pdf',
   },
 ];
 
