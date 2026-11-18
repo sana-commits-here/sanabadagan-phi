@@ -326,17 +326,17 @@
 .fig { margin-top: 26px; border: 1px solid var(--lab-line); background: rgba(255, 255, 255, 0.35); }
 .fig-head { padding: 9px 14px; border-bottom: 1px solid var(--lab-line); color: var(--lab-muted); }
 .fig-flow { display: flex; padding: 20px 16px; overflow-x: auto; }
-.fig-flow li { display: flex; align-items: center; flex: 1 1 0; min-width: 0; }
+.fig-flow li { display: flex; align-items: stretch; flex: 1 1 auto; min-width: 0; }
 .fig-flow li:last-child { flex: 0 0 auto; }
-.fig-box { display: block; padding: 10px 12px; border: 1px solid var(--lab-ink); background: var(--lab-bg); font-size: 13.5px; white-space: nowrap; }
+.fig-box { display: flex; align-items: center; justify-content: center; flex: 0 1 auto; min-width: 0; padding: 10px 12px; border: 1px solid var(--lab-ink); background: var(--lab-bg); font-size: 13.5px; line-height: 1.25; text-align: center; text-wrap: balance; }
 .fig-flow li:last-child .fig-box { background: var(--lab-ink); color: var(--lab-bg); }
-.fig-arrow { flex: 1; min-width: 16px; height: 1px; background: var(--lab-ink); position: relative; transform-origin: left; margin: 0 6px; }
+.fig-arrow { align-self: center; flex: 1 0 18px; height: 1px; background: var(--lab-ink); position: relative; transform-origin: left; margin: 0 6px; }
 .fig-arrow::after { content: ''; position: absolute; right: -1px; top: -3px; border: 3.5px solid transparent; border-left: 6px solid var(--lab-ink); border-right: 0; }
 @media (max-width: 720px) {
   .fig-flow { flex-direction: column; align-items: stretch; }
   .fig-flow li { flex-direction: column; align-items: stretch; flex: none; }
-  .fig-box { white-space: normal; }
-  .fig-arrow { width: 1px; height: 16px; min-width: 0; flex: none; margin: 4px 0 4px 18px; transform-origin: top; }
+  .fig-box { justify-content: flex-start; text-align: left; }
+  .fig-arrow { align-self: flex-start; width: 1px; height: 16px; min-width: 0; flex: none; margin: 4px 0 4px 18px; transform-origin: top; }
   .fig-arrow::after { right: -3px; top: auto; bottom: -2px; border: 3.5px solid transparent; border-top: 6px solid var(--lab-ink); border-bottom: 0; }
 }
 .sp-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; margin-top: 16px; }
